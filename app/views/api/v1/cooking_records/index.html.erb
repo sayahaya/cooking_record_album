@@ -2,7 +2,7 @@
   <h1 class="my-4">料理記録アルバム</h1>
 
   <%# レシピの種類のセレクトボックスでの絞り込み表示箇所 %>
-  <%= form_with url: cooking_records_path, method: :get, local: true, class: "mb-4" do %>
+  <%= form_with url: api_v1_cooking_records_path, method: :get, local: true, class: "mb-4" do %>
     <div class="d-flex justify-content-center align-items-center">
       <label for="recipe_type" class="me-2">レシピの種類:</label>
       <select name="recipe_type" class="form-select me-2" style="width: auto;">
@@ -16,17 +16,17 @@
   <% end %>
 
   <%# レコードの表示箇所 %>
-  <% if @error %>
+  <% if error %>
     <div class="alert alert-danger text-center mt-4" role="alert">
-      <p class="mb-0"><%= @error %></p>
+      <p class="mb-0"><%= error %></p>
     </div>
-  <% elsif @records.present? %>
-    <p class="mb-4">該当件数: <%= @records.total_count %>件</p>
+  <% elsif records.present? %>
+    <p class="mb-4">該当件数: <%= records.total_count %>件</p>
 
-    <%= render 'record_navigation', records: @records %>
+    <%= render 'record_navigation', records: records %>
 
     <div class="row record-list">
-      <% @records.each do |record| %>
+      <% records.each do |record| %>
         <div class="col-md-4 mb-4">
           <div class="card h-100">
             <img src="<%= record['image_url'] %>" class="card-img-top" alt="<%= record['recipe_type'] %> image">
@@ -40,7 +40,7 @@
       <% end %>
     </div>
 
-    <%= render 'record_navigation', records: @records %>
+    <%= render 'record_navigation', records: records %>
   <% else %>
     <div class="alert alert-info text-center mt-4" role="alert">
       <p class="mb-0">表示するレシピがありません。</p>

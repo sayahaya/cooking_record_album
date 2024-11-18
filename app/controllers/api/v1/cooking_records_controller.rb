@@ -34,7 +34,7 @@ module Api
         rescue => e
           # 本来はApplicationControllerで共通の500エラーハンドリングを実装する方が望ましいと個人的に考えていますが、
           # 一旦ここで仮置きのエラーハンドリングを行っています。
-          massage = "エラーが発生しました。時間を置いて再度お試しください。"
+          message = "エラーが発生しました。時間を置いて再度お試しください。"
           respond_to do |format|
             format.json { render json: { error: message }, status: :internal_server_error }
             format.html { render :index, locals: { error: message, records: [] } }

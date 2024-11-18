@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "CookingRecords", type: :system do
+RSpec.describe "Api::V1::CookingRecords", type: :system do
   before do
     # JavaScriptのテストがないので一旦軽量なrack_testを採用
     # TODO:今後他のsystemスペックが増えたときには、個別specファイルでドライバを設定せず、spec_helper.rbで設定する
@@ -12,7 +12,7 @@ RSpec.describe "CookingRecords", type: :system do
 
   describe '料理記録アルバム' do
     before do
-      visit cooking_records_path
+      visit api_v1_cooking_records_path
     end
 
     context 'ページが正しく表示される場合' do
@@ -39,7 +39,7 @@ RSpec.describe "CookingRecords", type: :system do
       end
 
       it 'レコードが表示され、次へボタンが存在すること' do
-        visit cooking_records_path
+        visit api_v1_cooking_records_path
         expect(page).to have_selector(".record-list .col-md-4", count: 10)
         expect(page).to have_selector('a[rel="next"]', text: '次')
       end
@@ -48,7 +48,7 @@ RSpec.describe "CookingRecords", type: :system do
     context 'エラーメッセージがある場合' do
       it 'エラーメッセージが表示されること' do
         allow(CookingRecordService).to receive(:fetch_records).and_return({ error: 'エラーが発生しました' })
-        visit cooking_records_path
+        visit api_v1_cooking_records_path
         expect(page).to have_content 'エラーが発生しました'
       end
     end
@@ -59,7 +59,7 @@ RSpec.describe "CookingRecords", type: :system do
       end
 
       it '「表示するレシピがありません」が表示されること' do
-        visit cooking_records_path
+        visit api_v1_cooking_records_path
         expect(page).to have_content '表示するレシピがありません'
       end
     end

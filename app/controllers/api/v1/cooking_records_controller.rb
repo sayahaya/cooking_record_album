@@ -3,8 +3,6 @@ module Api
     class CookingRecordsController < ApplicationController
       # Paginationのデフォルト値として使用される定数
       # 現在はこのコントローラーでのみ使用されるため、コントローラー内に定義しています。
-      # TODO:将来的に他のコントローラーでも共通のページネーションロジックを使う場合は、
-      #      ヘルパーモジュールやサービスクラスに切り出して再利用できるようにすることを検討する。
       DEFAULT_LIMIT = 10.freeze
       DEFAULT_PAGE = 1.freeze
 

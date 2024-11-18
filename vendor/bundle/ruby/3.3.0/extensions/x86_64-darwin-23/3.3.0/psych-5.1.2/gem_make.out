@@ -1,0 +1,32 @@
+current directory: /Users/hayat/Documents/隼人フォルダ/プログラミングフォルダ/おいしい健康応募用/cooking_record_album/vendor/bundle/ruby/3.3.0/gems/psych-5.1.2/ext/psych
+/Users/hayat/.rbenv/versions/3.3.5/bin/ruby extconf.rb
+checking for pkg-config for yaml-0.1... ["-I/usr/local/Cellar/libyaml/0.2.5/include ", "-L/usr/local/Cellar/libyaml/0.2.5/lib", "-lyaml"]
+checking for yaml.h... yes
+checking for yaml_get_version() in -lyaml... yes
+creating Makefile
+
+current directory: /Users/hayat/Documents/隼人フォルダ/プログラミングフォルダ/おいしい健康応募用/cooking_record_album/vendor/bundle/ruby/3.3.0/gems/psych-5.1.2/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20241021-47417-jhytsv sitelibdir\=./.gem.20241021-47417-jhytsv clean
+cd libyaml && /Library/Developer/CommandLineTools/usr/bin/make clean
+/bin/sh: line 0: cd: libyaml: No such file or directory
+make: [clean-so] Error 1 (ignored)
+
+current directory: /Users/hayat/Documents/隼人フォルダ/プログラミングフォルダ/おいしい健康応募用/cooking_record_album/vendor/bundle/ruby/3.3.0/gems/psych-5.1.2/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20241021-47417-jhytsv sitelibdir\=./.gem.20241021-47417-jhytsv
+compiling psych.c
+compiling psych_emitter.c
+compiling psych_parser.c
+compiling psych_to_ruby.c
+compiling psych_yaml_tree.c
+linking shared-object psych.bundle
+ld: warning: dylib (/usr/local/opt/libyaml/lib/libyaml.dylib) was built for newer macOS version (14.0) than being linked (11.1)
+
+current directory: /Users/hayat/Documents/隼人フォルダ/プログラミングフォルダ/おいしい健康応募用/cooking_record_album/vendor/bundle/ruby/3.3.0/gems/psych-5.1.2/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20241021-47417-jhytsv sitelibdir\=./.gem.20241021-47417-jhytsv install
+/usr/bin/install -c -m 0755 psych.bundle ./.gem.20241021-47417-jhytsv
+
+current directory: /Users/hayat/Documents/隼人フォルダ/プログラミングフォルダ/おいしい健康応募用/cooking_record_album/vendor/bundle/ruby/3.3.0/gems/psych-5.1.2/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20241021-47417-jhytsv sitelibdir\=./.gem.20241021-47417-jhytsv clean
+cd libyaml && /Library/Developer/CommandLineTools/usr/bin/make clean
+/bin/sh: line 0: cd: libyaml: No such file or directory
+make: [clean-so] Error 1 (ignored)

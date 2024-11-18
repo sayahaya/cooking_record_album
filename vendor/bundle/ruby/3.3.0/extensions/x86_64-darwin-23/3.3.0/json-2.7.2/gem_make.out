@@ -1,0 +1,16 @@
+current directory: /Users/hayat/Documents/隼人フォルダ/プログラミングフォルダ/おいしい健康応募用/cooking_record_album/vendor/bundle/ruby/3.3.0/gems/json-2.7.2/ext/json
+/Users/hayat/.rbenv/versions/3.3.5/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/hayat/Documents/隼人フォルダ/プログラミングフォルダ/おいしい健康応募用/cooking_record_album/vendor/bundle/ruby/3.3.0/gems/json-2.7.2/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20241021-47417-pxpfv8 sitelibdir\=./.gem.20241021-47417-pxpfv8 clean
+
+current directory: /Users/hayat/Documents/隼人フォルダ/プログラミングフォルダ/おいしい健康応募用/cooking_record_album/vendor/bundle/ruby/3.3.0/gems/json-2.7.2/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20241021-47417-pxpfv8 sitelibdir\=./.gem.20241021-47417-pxpfv8
+make: Nothing to be done for `all'.
+
+current directory: /Users/hayat/Documents/隼人フォルダ/プログラミングフォルダ/おいしい健康応募用/cooking_record_album/vendor/bundle/ruby/3.3.0/gems/json-2.7.2/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20241021-47417-pxpfv8 sitelibdir\=./.gem.20241021-47417-pxpfv8 install
+
+current directory: /Users/hayat/Documents/隼人フォルダ/プログラミングフォルダ/おいしい健康応募用/cooking_record_album/vendor/bundle/ruby/3.3.0/gems/json-2.7.2/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20241021-47417-pxpfv8 sitelibdir\=./.gem.20241021-47417-pxpfv8 clean

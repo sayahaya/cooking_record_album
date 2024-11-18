@@ -1,0 +1,14 @@
+ja:
+  api:
+    recipe_types:
+      main_dish: "主菜/主食"
+      side_dish: "副菜"
+      soup: "スープ"
+
+  views:
+    pagination:
+      first: "最初"
+      last: "最後"
+      previous: "前"
+      next: "次"
+      truncate: "..."

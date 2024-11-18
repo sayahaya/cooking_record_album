@@ -1,0 +1,11 @@
+<div>
+  <p class="text-muted">
+    全<%= records.total_count %>件中、
+    <%= records.offset_value + 1 %>件目から
+    <%= [records.offset_value + records.limit_value, records.total_count].min %>件目まで表示
+  </p>
+</div>
+
+<div class="pagination justify-content-center">
+  <%= paginate records, theme: 'bootstrap-5' %>
+</div>

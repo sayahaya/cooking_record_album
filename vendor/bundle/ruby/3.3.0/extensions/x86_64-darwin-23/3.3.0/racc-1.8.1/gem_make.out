@@ -1,0 +1,18 @@
+current directory: /Users/hayat/Documents/隼人フォルダ/プログラミングフォルダ/おいしい健康応募用/cooking_record_album/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+/Users/hayat/.rbenv/versions/3.3.5/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/hayat/Documents/隼人フォルダ/プログラミングフォルダ/おいしい健康応募用/cooking_record_album/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20241021-47417-f2srir sitelibdir\=./.gem.20241021-47417-f2srir clean
+
+current directory: /Users/hayat/Documents/隼人フォルダ/プログラミングフォルダ/おいしい健康応募用/cooking_record_album/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20241021-47417-f2srir sitelibdir\=./.gem.20241021-47417-f2srir
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/hayat/Documents/隼人フォルダ/プログラミングフォルダ/おいしい健康応募用/cooking_record_album/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20241021-47417-f2srir sitelibdir\=./.gem.20241021-47417-f2srir install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20241021-47417-f2srir/racc
+
+current directory: /Users/hayat/Documents/隼人フォルダ/プログラミングフォルダ/おいしい健康応募用/cooking_record_album/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20241021-47417-f2srir sitelibdir\=./.gem.20241021-47417-f2srir clean

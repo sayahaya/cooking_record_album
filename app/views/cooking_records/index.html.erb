@@ -1,0 +1,50 @@
+<div class="container text-center">
+  <h1 class="my-4">料理記録アルバム</h1>
+
+  <%# レシピの種類のセレクトボックスでの絞り込み表示箇所 %>
+  <%= form_with url: cooking_records_path, method: :get, local: true, class: "mb-4" do %>
+    <div class="d-flex justify-content-center align-items-center">
+      <label for="recipe_type" class="me-2">レシピの種類:</label>
+      <select name="recipe_type" class="form-select me-2" style="width: auto;">
+        <option value="">全て</option>
+        <option value="main_dish" <%= 'selected' if params[:recipe_type] == 'main_dish' %>><%= t("api.recipe_types.main_dish") %></option>
+        <option value="side_dish" <%= 'selected' if params[:recipe_type] == 'side_dish' %>><%= t("api.recipe_types.side_dish") %></option>
+        <option value="soup" <%= 'selected' if params[:recipe_type] == 'soup' %>><%= t("api.recipe_types.soup") %></option>
+      </select>
+      <button type="submit" class="btn btn-primary">絞り込む</button>
+    </div>
+  <% end %>
+
+  <%# レコードの表示箇所 %>
+  <% if @error %>
+    <div class="alert alert-danger text-center mt-4" role="alert">
+      <p class="mb-0"><%= @error %></p>
+    </div>
+  <% elsif @records.present? %>
+    <p class="mb-4">該当件数: <%= @records.total_count %>件</p>
+
+    <%= render 'record_navigation', records: @records %>
+
+    <div class="row record-list">
+      <% @records.each do |record| %>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="<%= record['image_url'] %>" class="card-img-top" alt="<%= record['recipe_type'] %> image">
+            <div class="card-body">
+              <h5 class="card-title">レシピの種類: <%= t("api.recipe_types.#{record['recipe_type']}") %></h5>
+              <p class="card-text"><%= record['comment'] %></p>
+              <p class="text-muted">記録日時: <%= record['recorded_at'] %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <%= render 'record_navigation', records: @records %>
+  <% else %>
+    <div class="alert alert-info text-center mt-4" role="alert">
+      <p class="mb-0">表示するレシピがありません。</p>
+    </div>
+  <% end %>
+</div>
+

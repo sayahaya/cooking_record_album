@@ -1,0 +1,18 @@
+current directory: /Users/hayat/Documents/隼人フォルダ/プログラミングフォルダ/おいしい健康応募用/cooking_record_album/vendor/bundle/ruby/3.3.0/gems/websocket-driver-0.7.6/ext/websocket-driver
+/Users/hayat/.rbenv/versions/3.3.5/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/hayat/Documents/隼人フォルダ/プログラミングフォルダ/おいしい健康応募用/cooking_record_album/vendor/bundle/ruby/3.3.0/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20241021-47417-1fr17x sitelibdir\=./.gem.20241021-47417-1fr17x clean
+
+current directory: /Users/hayat/Documents/隼人フォルダ/プログラミングフォルダ/おいしい健康応募用/cooking_record_album/vendor/bundle/ruby/3.3.0/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20241021-47417-1fr17x sitelibdir\=./.gem.20241021-47417-1fr17x
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/hayat/Documents/隼人フォルダ/プログラミングフォルダ/おいしい健康応募用/cooking_record_album/vendor/bundle/ruby/3.3.0/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20241021-47417-1fr17x sitelibdir\=./.gem.20241021-47417-1fr17x install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20241021-47417-1fr17x
+
+current directory: /Users/hayat/Documents/隼人フォルダ/プログラミングフォルダ/おいしい健康応募用/cooking_record_album/vendor/bundle/ruby/3.3.0/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20241021-47417-1fr17x sitelibdir\=./.gem.20241021-47417-1fr17x clean

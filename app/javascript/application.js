@@ -3,3 +3,4 @@
 //= require bootstrap-sprockets
 import "bootstrap";
 import "@popperjs/core";
+import "@hotwired/turbo-rails"

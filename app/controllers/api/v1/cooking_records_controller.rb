@@ -21,11 +21,13 @@ module Api
           if result[:error]
             respond_to do |format|
               format.json { render json: { error: result[:error] }, status: :service_unavailable }
+              format.turbo_stream { render turbo_stream: turbo_stream.replace("cooking_records_list", partial: "api/v1/cooking_records/index", locals: { error: result[:error], records: [] }) }
               format.html { render :index, locals: { error: result[:error], records: [] } }
             end
           else
             respond_to do |format|
               format.json { render json: { records: result[:records], pagination: result[:pagination] }, status: :ok }
+              format.turbo_stream { render turbo_stream: turbo_stream.replace("cooking_records_list", partial: "api/v1/cooking_records/index", locals: { error: nil, records: result[:records] }) }
               format.html { render :index, locals: { records: result[:records], error: nil } }
             end
           end
@@ -35,6 +37,7 @@ module Api
           message = "エラーが発生しました。時間を置いて再度お試しください。"
           respond_to do |format|
             format.json { render json: { error: message }, status: :internal_server_error }
+            format.turbo_stream { render turbo_stream: turbo_stream.replace("cooking_records_list", partial: "api/v1/cooking_records/index", locals: { error: message, records: [] }) }
             format.html { render :index, locals: { error: message, records: [] } }
           end
         end
